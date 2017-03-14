@@ -1,0 +1,9 @@
+.gameTitle h1 {
+  font-family: arial;
+  font-size: 36px;
+  text-align: center;
+  color: red;
+}
+.Instructions {
+  text-align: center;
+}
