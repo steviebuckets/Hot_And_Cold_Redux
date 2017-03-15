@@ -2,9 +2,10 @@ require('babel-polyfill');
 import {Router, Route, IndexRoute, hashHistory} from 'react-router';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
 import App from './components/app';
 import Game from './components/game';
-import {Provider} from 'react-redux';
+
 import store from './store';
 
 
@@ -16,7 +17,12 @@ import store from './store';
 //     </Route>
 //   </Router>
 // );
+
 document.addEventListener('DOMContentLoaded', () =>
-  ReactDOM.render(<Provider store={store}>
-     <Game /> </Provider>, document.getElementById('app'))
+    ReactDOM.render(
+        <Provider store={store}>
+            <Game />
+        </Provider>,
+        document.getElementById('app')
+    )
 );
